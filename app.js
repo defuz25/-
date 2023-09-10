@@ -51,7 +51,7 @@ bot.command('start', (ctx)=>{
     ctx.reply('Ежедневные напоминания включены. Чтобы отключить введите /stop');
     reminders = setInterval(()=>{
         let date = new Date();
-        if(date.getHours()==10 && date.getMinutes()==47 && date.getSeconds()==0){
+        if(date.getHours()==0 && date.getMinutes()==0 && date.getSeconds()==0){
             getBirthday(date, ctx);
         }
     }, 1000);
